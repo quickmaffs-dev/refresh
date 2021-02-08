@@ -12,10 +12,11 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    const s = document.createElement('./ghspa.js');
+    const s = document.createElement('script');
     s.type = 'text/javascript';
     s.async = true;
     s.innerHTML = "document.write('This is output by document.write()!')";
+    s.src = "./ghspa.js";
     this.instance.appendChild(s);
   }
 
