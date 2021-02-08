@@ -5,7 +5,7 @@ function Contents() {
   return (
     <div className="Contents">   
         <script type="text/javascript" src="./ghspa.js"></script>
-        Contents      
+        Contents2
     </div>
   );
 }

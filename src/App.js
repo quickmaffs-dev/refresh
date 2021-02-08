@@ -6,9 +6,21 @@ import Login from './Login.js';
 import Chapters from './Chapters.js';
 import Nav from './Nav.js';
 
-function App() {
-  return (
-    <div className="App">
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    const s = document.createElement('./ghspa.js');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.innerHTML = "document.write('This is output by document.write()!')";
+    this.instance.appendChild(s);
+  }
+
+  render() {
+    return <div className="App">
         <script type="text/javascript" src="./ghspa.js"></script>
         <Nav />
         <Switch>
@@ -16,8 +28,7 @@ function App() {
             <Route path="/chapters" component={Chapters} />
             <Route path="/login" component={Login} />
         </Switch>       
-    </div>
-  );
+    </div>;
+  }
 }
 
-export default App;
