@@ -16,7 +16,7 @@ export default class App extends React.Component {
     s.type = 'text/javascript';
     s.async = true;
     s.innerHTML = "document.write('This is output by document.write()!')";
-    s.src = "./ghspa.js";
+    s.src = "https://github.com/websemantics/gh-pages-spa/blob/master/ghspa.js";
     this.instance.appendChild(s);
   }
 
